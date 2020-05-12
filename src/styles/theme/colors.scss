@@ -1,0 +1,24 @@
+$status-colors: (
+  beaver: #9e7f66,
+  codGrey: #ffffff,
+  mirage: #17192b,
+  ebonyClay: #242b37,
+  shuttleGrey: #5c6779,
+);
+
+.color {
+  @each $status, $color in $status-colors {
+    &-#{$status} {
+      color: $color;
+    }
+  }
+}
+
+.bg-color {
+  @each $status, $color in $status-colors {
+    &-#{$status} {
+      background-color: $color;
+    }
+  }
+}
+

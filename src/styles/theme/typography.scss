@@ -1,0 +1,39 @@
+@function typography_variant(
+  $size,
+  $weight,
+  $line_height,
+  $spacing,
+) {
+  @return (
+    size: $size,
+    weight: $weight,
+    line_height: $line_height,
+    spacing: $spacing,
+  )
+};
+
+$typography_variants: (
+  head_l: typography_variant(64px, 300, 1.13, -0.8px),
+  head_m: typography_variant(40px, 700, 1.4, -0.5px),
+  head_s: typography_variant(18px, 700, 1.56, -0.22px),
+  head_xs: typography_variant(14px, 600, 2, 2px),
+  body_m: typography_variant(18px, 400, 1.67, -0.22px),
+  body_s: typography_variant(15px, 400, 1.87, -0.19px),
+);
+
+@mixin typography($variant) {
+  $var: map-get($typography_variants, $variant);
+  font-size: map-get($var, size);
+  letter-spacing: map-get($var, spacing);
+  line-height: map-get($var, line_height);
+  font-weight: map-get($var, weight);
+}
+
+.font {
+  @each $variant, $value in $typography_variants {
+    @debug $variant;
+    &-#{$variant} {
+      @include typography($variant);
+    }
+  }
+}

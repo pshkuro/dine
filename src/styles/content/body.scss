@@ -1,0 +1,17 @@
+body {
+  margin:0;
+  padding:0;
+  font-family: 'Spartan', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 165px 0 165px;
+}
+
+@media(min-width: 992px) {
+  .container {
+    max-width: 1110px;
+  }
+}
