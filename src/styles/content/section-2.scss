@@ -1,0 +1,16 @@
+.section-2 {
+  background: url(/public/images/patterns/pattern-curve-top-left.svg) no-repeat right bottom 70px;
+  background-size: 78,5% 320px;
+  padding: 70px 0 0 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__wrap {
+    padding: 150px 0 0 0;
+    margin-right: 125px;
+  }
+}

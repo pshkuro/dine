@@ -1,3 +1,7 @@
+width - 30
+height - 40
+
+
 # Webpack Frontend Starterkit
 
 [![Dependabot badge](https://flat.badgen.net/dependabot/wbkd/webpack-starter?icon=dependabot)](https://dependabot.com/)

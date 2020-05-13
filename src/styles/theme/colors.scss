@@ -4,6 +4,7 @@ $status-colors: (
   mirage: #17192b,
   ebonyClay: #242b37,
   shuttleGrey: #5c6779,
+  black: #111111,
 );
 
 .color {
@@ -16,7 +17,7 @@ $status-colors: (
 
 .bg-color {
   @each $status, $color in $status-colors {
-    &-#{$status} {
+    &__#{$status} {
       background-color: $color;
     }
   }

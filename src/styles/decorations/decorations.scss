@@ -1,0 +1,35 @@
+@mixin pattern__lines {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  width: 160px;
+  height: 76px;
+  background: url(/public/images/patterns/pattern-lines.svg) no-repeat 100% 100%;
+}
+
+@mixin photos__line {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  width: 36px;
+  height: 2px;
+  background: url(/public/images/icons/icon-minus.svg) no-repeat 100% 100%;
+  background-size: 36px 1px;
+}
+
+
+.section-2__container::before {
+  @include pattern__lines();
+  top: 255px;
+  right: 50px;
+}
+
+.section-3__wrap__description .row__photos::after {
+  @include photos__line();
+  top: 13px;
+  right: -33px;
+}
+
+.border-line__bottom {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
