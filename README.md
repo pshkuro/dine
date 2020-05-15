@@ -1,5 +1,6 @@
 width - 30
 height - 40
+пофиксить в слайдере ховер
 
 
 # Webpack Frontend Starterkit

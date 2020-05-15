@@ -1,0 +1,50 @@
+.section-4 {
+  padding: 160px 0 160px 0;
+  background: url(/public/images/patterns/pattern-curve-top-right.svg) no-repeat top left;
+  background-size: 545px 320px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    // Photo block
+    &__row__photo {
+      position: relative;
+    }
+
+    // Main content block
+    &__row__content {
+      display: flex;
+      flex-direction: column;
+      margin-left: 105px;
+
+      .row__content__description {
+        &__font-body_m {
+          margin: -13px 0px 32px 0px;
+        }
+      }
+
+      .row__content__slider {
+        margin-top: 70px;
+
+        // Slider buttons default style
+        .font-head_xs span {
+          @include setTextOpacity();
+
+          &:hover {
+            @include setTextOpacity(1, 1);
+          }
+        }
+
+        // Slider active button styles
+        .active {
+          position: relative;
+          
+          span {
+            @include setTextOpacity(1, 1);
+          }
+        }
+      }
+    }
+  }
+}

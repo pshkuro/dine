@@ -1,0 +1,14 @@
+.reservation {
+  padding: 92px 0 92px 0;
+  background: url(/public/images/homepage/ready-bg-desktop.jpg) no-repeat;
+  background-size: 100% 100%;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    .row__title__font-head_m {
+      margin: 0;
+    }
+  }
+}

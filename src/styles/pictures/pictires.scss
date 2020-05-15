@@ -2,33 +2,40 @@
   -webkit-box-shadow: 0px 30px 63px -27px rgba(92,103,121,1);
   -moz-box-shadow: 0px 30px 63px -27px rgba(92,103,121,1);
   box-shadow: 0px 30px 63px -27px rgba(92,103,121,1);
-}
 
-.img__logo {
-  max-width: 103px;
-  height: 43px;
-}
+    &__logo {
+      max-width: 103px;
+      height: 43px;
+    };
 
-.img__place {
-  max-width: 540px;
-  width: 510px;
-  height: 680px;
-  margin-top: -70px;
 
-  &__bottom {
-    position: relative;
-    margin: 0 0 0 -70px;  
-  }
-}
+    &__place {
+      max-width: 510px;
+      width: 510px;
+      height: 680px;
+      margin-top: -70px;
+    
+      &__bottom {
+        position: relative;
+        margin: 0 0 0 -70px;  
+      }
+    };
 
-.img__divide {
-  max-width: 60px;
-  margin-bottom: 11px;
-}
+    &__divide {
+      max-width: 60px;
+      margin-bottom: 11px;
+    };
 
-.img__food {
-  max-width: 128px;
-  width: 128px;
-  height: 96px;
-
+    &__food {
+      max-width: 128px;
+      width: 128px;
+      height: 96px;
+    
+    };
+    
+    &__family {
+      max-width: 510px;
+      width: 510px;
+      height: 550px;
+    }
 }

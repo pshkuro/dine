@@ -1,0 +1,12 @@
+.footer {
+  padding: 78px 0 78px 0;
+
+  p {
+    margin: 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
