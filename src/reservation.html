@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>dine reservation</title>
+</head>
+
+<body>
+  <header class="reservation-page__header color-codGrey">
+    <div class="container">
+      <div class="logo">
+        <img class="img__logo" src="../public/images/logo.svg" alt="Dine">
+      </div>
+      <h1 class="header__title font-head_l">Reservations</h1>
+      <p class="font-body_m">We can’t wait to host you. If you have any<br>
+         special requirements please feel free to call<br>
+         on the phone number below. We’ll be happy<br>
+         to accommodate you.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="reservation-page font-head_s">
+      <div class="container reservation-page__container">
+        <div class="reservation-form__container">
+          <form action="#" class="reservation-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <div class="reservation-form__date reservation-form__picked">
+              <h2 class="font-body_m">Pick a date</h2>
+              <input type="text" placeholder="MM" id="month" class="picked-el">
+              <input type="text" placeholder="DD" id="day" class="picked-el">
+              <input type="text" placeholder="YYYY" id="year" class="picked-el__big">
+            </div>
+            <div class="reservation-form__time reservation-form__picked">
+              <h2 class="font-body_m">Pick a time</h2>
+              <input type="text" placeholder="09" id="hour" class="picked-el">
+              <input type="text" placeholder="00" id="minutes" class="picked-el">
+              <select name="meridien" id="meridien" class="picked-el__big">
+                <option value="AM" selected>AM</option>
+                <option value="PM">PM</option>
+              </select>
+            </div>
+            <div class="reservation-form__people-count">
+              <button type="button" class="button button__people-count">
+                <img src="/public/images/icons/icon-minus.svg" alt="Minus" class="img__minus">
+              </button>
+              <h2 class="font-head_s">4 people</h2>
+              <button type="button" class="button button__people-count">
+                <img src="/public/images/icons/icon-plus.svg" alt="Plus" class="img__plus">
+              </button>
+            </div>
+            <button class="button button_theme_light button__resarvation-form">MAKE RESERVATION</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer color-codGrey bg-color__black">
+    <div class="container footer__container">
+      <div class="footer__container__row__logo">
+        <img class="img__logo" src="../public/images/logo.svg" alt="Dine">
+      </div>
+      <div class="footer__container__row__address">
+        <p class="font-footer_m">MARTHWAITE, SEDBERGH<br>
+          CUMBRIA<br>
+          +00 44 123 4567</p>
+      </div>
+      <div class="footer__container__row__open-time">
+        <p class="font-footer_m">OPEN TIMES<br>
+          MON - FRI: 09:00 AM - 10:00 PM<br>
+          SAT - SUN: 09:00 AM - 11:30 PM
+          </p>
+      </div>
+    </div>
+  </footer>
+</body>
+

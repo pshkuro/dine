@@ -1,0 +1,62 @@
+.reservation-page {
+  padding: 180px 0 100px 0;
+  background: url(/public/images/patterns/pattern-curve-bottom-right.svg) left top no-repeat;
+
+  .reservation-form__container {
+    display: flex;
+
+    justify-content: flex-end;
+
+    .reservation-form {
+      margin-top: -520px;
+      width: 540px;
+      padding: 48px;
+      background-color: #ffffff;
+      box-sizing: border-box;
+      position: relative;
+      -webkit-box-shadow: 0px 30px 63px -27px rgba(92,103,121,1);
+      -moz-box-shadow: 0px 30px 63px -27px rgba(92,103,121,1);
+      box-shadow: 0px 30px 63px -27px rgba(92,103,121,1);
+
+      input, select {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 16px;
+        margin-bottom: 16px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        font: 400 18px Spartan;
+      };
+
+      // Picked inputs blocks
+      &__picked {
+        display: flex;
+        justify-content: space-between;
+
+        input, select {
+          margin-left: 16px;
+          text-align: center;
+        }
+      }
+
+      // Picked inputs el
+      .picked-el {
+        width: 80px;
+
+        &__big {
+          width: 97px;
+        }
+      }
+
+      // People count el
+      &__people-count {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        margin-bottom: 32px;
+      }
+
+    }
+  }
+}

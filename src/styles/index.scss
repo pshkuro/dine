@@ -3,13 +3,15 @@
 @import "./buttons/buttons.scss";
 @import "./pictures/pictires.scss";
 @import "./decorations/decorations.scss";
-@import "./blocks/body/body.scss";
-@import "./blocks/header/header.scss";
-@import "./blocks/main/section-1.scss";
-@import "./blocks/main/section-2.scss";
-@import "./blocks/main/section-3.scss";
-@import "./blocks/main/section-4.scss";
-@import "./blocks/main/reservation.scss";
-@import "./blocks/footer/footer.scss";
+@import "./main-page/body/body.scss";
+@import "./main-page/header/header.scss";
+@import "./main-page/main/section-1.scss";
+@import "./main-page/main/section-2.scss";
+@import "./main-page/main/section-3.scss";
+@import "./main-page/main/section-4.scss";
+@import "./main-page/main/reservation.scss";
+@import "./main-page/footer/footer.scss";
+@import "./reservation-page/header.scss";
+@import "./reservation-page/reservation.scss";
 
 @import "./decorations/decorations-element.scss";

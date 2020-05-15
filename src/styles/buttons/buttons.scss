@@ -47,5 +47,19 @@
   &_theme {
     @include button_theme(light, #111111, #ffffff);
     @include button_theme(dark, #ffffff, #111111);
+    // @include button_theme(light-dark, )
+  }
+}
+
+.button {
+  &__people-count {
+    min-width: 26px;
+    width: 26px;
+    height: 26px;
+    margin: 0 30px;
+  }
+
+  &__resarvation-form {
+    width: 100%;
   }
 }
