@@ -1,15 +1,20 @@
 @import '../variables';
 @import '../theme/typography';
 
-@mixin button_theme($name, $primary_color, $accent_color) {
+@mixin button_theme($name, $primary_color, $accent_color, $bg_color: transparent) {
   &_#{$name} {
     border-color: $primary_color;
     color: $primary_color;
+    background-color: $bg_color;
 
     &:hover {
       background-color: $primary_color;  
-      border-color: $primary_color;
       color: $accent_color;
+      @if ($bg_color) {
+        border-color: $bg_color;
+      } @else {
+        border-color: $primary_color;
+      }
     }
   }
 }
@@ -44,10 +49,14 @@
     opacity: 0.25;
   }
 
+  &:active, &:focus {
+    outline: none;
+  }
+
   &_theme {
     @include button_theme(light, #111111, #ffffff);
     @include button_theme(dark, #ffffff, #111111);
-    // @include button_theme(light-dark, )
+    @include button_theme(reservation, #ffffff, #111111, #111111)
   }
 }
 

@@ -4,6 +4,12 @@
   opacity: $opacity;
 };
 
+@mixin setPageElementShadow() {
+  -webkit-box-shadow: 0px 30px 63px -27px rgba(92,103,121,1);
+  -moz-box-shadow: 0px 30px 63px -27px rgba(92,103,121,1);
+  box-shadow: 0px 30px 63px -27px rgba(92,103,121,1);
+}
+
 .border-line__bottom {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }

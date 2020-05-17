@@ -26,19 +26,19 @@
       <div class="container reservation-page__container">
         <div class="reservation-form__container">
           <form action="#" class="reservation-form">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Name" maxlength="40" required>
+            <input type="email" placeholder="Email" maxlength="30" required>
             <div class="reservation-form__date reservation-form__picked">
               <h2 class="font-body_m">Pick a date</h2>
-              <input type="text" placeholder="MM" id="month" class="picked-el">
-              <input type="text" placeholder="DD" id="day" class="picked-el">
-              <input type="text" placeholder="YYYY" id="year" class="picked-el__big">
+              <input type="text" placeholder="MM" id="month" class="picked-el" maxlength="2" required>
+              <input type="text" placeholder="DD" id="day" class="picked-el" maxlength="2" required>
+              <input type="text" placeholder="YYYY" id="year" class="picked-el__big" maxlength="4" required>
             </div>
             <div class="reservation-form__time reservation-form__picked">
               <h2 class="font-body_m">Pick a time</h2>
-              <input type="text" placeholder="09" id="hour" class="picked-el">
-              <input type="text" placeholder="00" id="minutes" class="picked-el">
-              <select name="meridien" id="meridien" class="picked-el__big">
+              <input type="text" placeholder="09" id="hour" class="picked-el" maxlength="2" required>
+              <input type="text" placeholder="00" id="minutes" class="picked-el" maxlength="2" required>
+              <select name="meridien" id="meridien" class="picked-el__big" required>
                 <option value="AM" selected>AM</option>
                 <option value="PM">PM</option>
               </select>
@@ -47,12 +47,12 @@
               <button type="button" class="button button__people-count">
                 <img src="/public/images/icons/icon-minus.svg" alt="Minus" class="img__minus">
               </button>
-              <h2 class="font-head_s">4 people</h2>
+              <h2 class="font-head_s"><span class="pople-count">4</span> people</h2>
               <button type="button" class="button button__people-count">
                 <img src="/public/images/icons/icon-plus.svg" alt="Plus" class="img__plus">
               </button>
             </div>
-            <button class="button button_theme_light button__resarvation-form">MAKE RESERVATION</button>
+            <button class="button button_theme_reservation button__resarvation-form">MAKE RESERVATION</button>
           </form>
         </div>
       </div>
