@@ -1,5 +1,7 @@
 width - 30
 height - 40
+when button disabled on site?
+create logo to action on main page
 
 
 # Webpack Frontend Starterkit
