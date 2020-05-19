@@ -26,29 +26,29 @@
       <div class="container reservation-page__container">
         <div class="reservation-form__container">
           <form action="#" class="reservation-form">
-            <input type="text" placeholder="Name" maxlength="40" required>
-            <input type="email" placeholder="Email" maxlength="30" required>
-            <div class="reservation-form__date reservation-form__picked">
+            <input type="text" placeholder="Name" maxlength="40" id="name" class="error-message__parent">
+            <input type="email" placeholder="Email" maxlength="30" id="email" class="error-message__parent">
+            <div class="reservation-form__date reservation-form__picked error-message__parent">
               <h2 class="font-body_m">Pick a date</h2>
-              <input type="text" placeholder="MM" id="month" class="picked-el" maxlength="2" required>
-              <input type="text" placeholder="DD" id="day" class="picked-el" maxlength="2" required>
-              <input type="text" placeholder="YYYY" id="year" class="picked-el__big" maxlength="4" required>
+              <input type="text" placeholder="MM" id="month" class="picked-el number__field" maxlength="2">
+              <input type="text" placeholder="DD" id="day" class="picked-el number__field" maxlength="2">
+              <input type="text" placeholder="YYYY" id="year" class="picked-el__big number__field" maxlength="4">
             </div>
-            <div class="reservation-form__time reservation-form__picked">
+            <div class="reservation-form__time reservation-form__picked error-message__parent">
               <h2 class="font-body_m">Pick a time</h2>
-              <input type="text" placeholder="09" id="hour" class="picked-el" maxlength="2" required>
-              <input type="text" placeholder="00" id="minutes" class="picked-el" maxlength="2" required>
-              <select name="meridien" id="meridien" class="picked-el__big" required>
+              <input type="text" placeholder="09" id="hour" class="picked-el number__field" maxlength="2">
+              <input type="text" placeholder="00" id="minutes" class="picked-el number__field" maxlength="2">
+              <select name="meridien" id="meridien" class="picked-el__big">
                 <option value="AM" selected>AM</option>
                 <option value="PM">PM</option>
               </select>
             </div>
             <div class="reservation-form__people-count">
-              <button type="button" class="button button__people-count">
+              <button type="button" class="button button__people-count button__people-count__minus">
                 <img src="/public/images/icons/icon-minus.svg" alt="Minus" class="img__minus">
               </button>
               <h2 class="font-head_s"><span class="pople-count">4</span> people</h2>
-              <button type="button" class="button button__people-count">
+              <button type="button" class="button button__people-count button__people-count__plus">
                 <img src="/public/images/icons/icon-plus.svg" alt="Plus" class="img__plus">
               </button>
             </div>

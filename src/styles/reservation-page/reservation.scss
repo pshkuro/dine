@@ -29,7 +29,24 @@
         &:focus {
           border-bottom: 1px solid rgba(0, 0, 0, 1);
         }
+
+        // Invalid input styles
+        &.unvalid {
+        border-bottom: 1px solid rgba(181, 73, 73, 0.8); 
+
+          &::placeholder {
+            color: #b54949;
+            @include setTextOpacity();
+          }
+      }
       };
+
+      .error-message {
+        font: 500 10px Spartan;
+        color: #b54949;
+        margin: -5px 0 0 0;
+      }
+
 
       // Picked inputs blocks
       &__picked {
