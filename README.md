@@ -1,8 +1,11 @@
 width - 30
 height - 40
 when button disabled on site?
-create logo to action on main page
 delete listeners??
+длделать api
+select
+поднять сообщения об ошибках
+адаптировать
 
 
 # Webpack Frontend Starterkit

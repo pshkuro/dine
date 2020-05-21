@@ -4,7 +4,6 @@
 
   .reservation-form__container {
     display: flex;
-
     justify-content: flex-end;
 
     .reservation-form {
@@ -16,7 +15,7 @@
       position: relative;
       @include setPageElementShadow();
 
-      input, select {
+      input, #meridien {
         box-sizing: border-box;
         width: 100%;
         padding: 16px;
@@ -60,11 +59,60 @@
 
       // Select styles
         #meridien {
-          // appearance: none;
+          position: relative;
+          display: block;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          appearance: none;
+          padding: 0;
+          max-width: 100px;
 
-          option {
-            height: 50px;
-            padding: 30px 30px 3px 42px;
+          .select__head {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+
+            &__content {
+              margin-left: 20px;
+            }
+
+            .select__img {
+              background: url('/public/images/icons/icon-arrow.svg') no-repeat; 
+              background-size: 100%;
+              width: 18px;
+              height: 10px;
+              margin-top: 3px;
+            }
+          }
+
+          .select__list {
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+            box-sizing: border-box;
+            display: none;
+            margin-top: 25px;
+            box-shadow: 0 15px 25px 0 rgba(56, 66, 85, 0.25);
+            background-color: #fff;
+
+            ul {
+              list-style: none;
+              margin: 0;
+              padding: 23px 0 7px 20px;
+              box-sizing: border-box;
+
+            }
+
+            li {
+              box-sizing: border-box;
+              margin-bottom: 16px;
+            }
+          }
+        }
+
+        .select__open {
+          .select__img {
+            transform: rotate(180deg);
           }
         }
       }

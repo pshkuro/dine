@@ -50,11 +50,25 @@
 }
 
 .reservation-page {
+
   .reservation-form::after {
     @include pattern__lines();
     z-index: -1;
     bottom: -40px;
     left: -85px;
   }
+
+    li.checked {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 10px;
+        background: url(/public/images/icons/icon-arrow.svg) no-repeat 100%;
+        left: 0;
+        top: 3px;
+      }
+    }
 }
 

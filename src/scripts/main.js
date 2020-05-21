@@ -3,6 +3,7 @@ import ReservationFormController from './controllers/reservation-form';
 import '../styles/index.scss';
 
 const carouselContainer = document.querySelector('.section-4');
+const reservationFormContainer = document.querySelector('.reservation-page__container');
 
 
 // Render MainPage CarouselComponent
@@ -12,4 +13,6 @@ if (carouselContainer) {
 }
 
 // Render ReservationPage FormComponent
-const reservaionFormController = new ReservationFormController();
+if (reservationFormContainer) {
+  const reservaionFormController = new ReservationFormController();
+}
