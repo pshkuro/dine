@@ -1,5 +1,6 @@
 import ValidationError from "../classes/validation-error";
 import validator from "validator";
+import {shake} from "../utils/common";
 
 const PEOPLE_MIN_COUNT = 1;
 
@@ -11,7 +12,8 @@ const ValidationErrors = {
 
 
 export default class ReservationFormController {
-  constructor() {
+  constructor(api) {
+    this._api = api;
     this._reservationForm = document.querySelector('.reservation-form');
 
     this._requiredFormFields = this._reservationForm.querySelectorAll('input');
@@ -60,6 +62,15 @@ export default class ReservationFormController {
       this._resetInvalidStyle();
       this._setOpenSelectStyle();
       this._validate();
+
+      const isInvalid = this._reservationForm.classList.contains('invalid');
+      const reservationInfo = this._gatherFormInfo();
+      if (!reservationInfo || isInvalid) {
+        shake(this._reservationForm);
+        return;
+      } else {
+        this._sendReservationInfo(reservationInfo);
+      }
     });
   }
 
@@ -96,6 +107,7 @@ export default class ReservationFormController {
     if (!errorMessageParent.classList.contains(errorClass)) {
       errorMessageParent.insertAdjacentHTML('afterend', '<p class="error-message">' + errorMessage + '</p>');
       errorMessageParent.classList.add(errorClass);
+      this._reservationForm.classList.add('invalid');
     }
 
   }
@@ -108,11 +120,14 @@ export default class ReservationFormController {
     errorMessageParent.forEach((parent) => parent.classList.remove(ValidationErrors.EMPTY.className,
        ValidationErrors.EMAIL.className, ValidationErrors.NUMERIC.className));
     errorMessageElements.forEach((message) => message.remove());
+
+    this._reservationForm.classList.contains('invalid') ? this._reservationForm.classList.remove('invalid') : '';
   }
 
   _validate() {
     const emailFormField = this._reservationForm.querySelector('input[type="email"]');
     const numberFormField = Array.from(this._reservationForm.querySelectorAll('.number__field'));
+  
 
     // Check is some empty field
     this._requiredFormFields.forEach((field) => {
@@ -130,6 +145,7 @@ export default class ReservationFormController {
     // Check are data fileds numeric
     const isNumberFieldRightFormat = numberFormField.filter((field) => !validator.isNumeric(field.value))
       .forEach((field) => this._setInvalidStyle(field, ValidationErrors.NUMERIC.label, ValidationErrors.NUMERIC.className));
+  
   }
 
   // For send form info
@@ -169,6 +185,16 @@ export default class ReservationFormController {
   _setOpenSelectStyle() {
     this._select.classList.add('select__open');
     this._selectList.style.display = `none`;
+  }
+
+  _sendReservationInfo(info) {
+    this._api.sendFormInfo(info)
+    .then(() => {
+      // Вывести сообщение об успешной отправке
+    })
+    .catch(() => {
+      shake(this._reservationForm);
+    });
   }
  
 }

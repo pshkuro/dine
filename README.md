@@ -2,10 +2,9 @@ width - 30
 height - 40
 when button disabled on site?
 delete listeners??
-длделать api
-select
-поднять сообщения об ошибках
 адаптировать
+выводить сообщение об ошибке или об успехе
+при шейке псевдоэлемент над а не под
 
 
 # Webpack Frontend Starterkit
