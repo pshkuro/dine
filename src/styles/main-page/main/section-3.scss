@@ -2,19 +2,46 @@
   margin-top: -70px;
   padding: 200px 0 120px 0;
 
+  @media(max-width: $tablet) { 
+    margin: 0;
+    padding: 100px 0;
+  }
+
+  @media(max-width: $mobile) { 
+    padding: 72px 0;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
+
+    @media(max-width: $tablet) { 
+      flex-direction: column;
+    }
   }
 
   &__wrap__content {
     margin-right: 90px;
+
+    @media(max-width: $tablet) { 
+      text-align: center;
+      margin: 0 0 10px 0;
+
+      br {
+        display: none;
+      }
+    }
   }
 
   .description__food {
     display: flex;
     justify-content: space-between;
     padding: 44px 0 13px 0;
+
+    @media(max-width: $mobile) { 
+      flex-direction: column;
+      text-align: center;
+    }
 
     .row__photos {
       position: relative;
@@ -23,8 +50,16 @@
     .row__content {
       margin-left: 60px;
 
+      @media(max-width: $mobile) { 
+        margin-left: 0;
+      }
+
       &_font-head_s {
         margin-top: 0;
+
+        @media(max-width: $mobile) { 
+          margin: 32px 0 0 0;
+        }
       }
     }
   }

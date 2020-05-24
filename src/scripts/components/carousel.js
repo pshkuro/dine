@@ -21,7 +21,9 @@ export default class CarouselComponent extends AbstractComponent {
   
     return (`<div class="container section-4__container">
     <div class="section-4__container__row__photo">
-      <img src="${this._imageAddress}" alt="${this._eventTitle}" class="img img__family carousel__img">
+      <picture class="img img__family carousel__img">
+        ${this._getImageMarkups(this._imageAddress)}
+      </picture>
     </div>
     <div class="section-4__container__row__content">
       <div class="row__content__description">
@@ -43,6 +45,7 @@ export default class CarouselComponent extends AbstractComponent {
   setCarouselClickHandler() {
     const carouselContainer = this._element.querySelector('.row__content__slider');
     carouselContainer.addEventListener('click', (evt) => {
+    
       const carouselItem = evt.target.closest('.carousel__item');
       if (carouselItem) {
         const carouselItemName = this._getCarouselTypeNameById(evt.target.parentElement.id);
@@ -63,9 +66,17 @@ export default class CarouselComponent extends AbstractComponent {
     const carouselTitle = this._element.querySelector('.carousel__title');
     const carouselDescription = this._element.querySelector('.carousel__description');
     
-    carouselImage.src = CaruoselItemContent[itemType].image_address;
+    carouselImage.innerHTML = this._getImageMarkups(CaruoselItemContent[itemType].image_address);
     carouselTitle.innerHTML = CaruoselItemContent[itemType].title;
     carouselDescription.innerHTML = CaruoselItemContent[itemType].description;
+  }
+
+  _getImageMarkups(imageUrl) {
+    return (`
+      <source media="(max-width: 767px)" srcset="${imageUrl}-mobile.jpg">
+      <source media="(max-width: 1440px)" srcset="${imageUrl}-tablet.jpg">
+      <img src="${imageUrl}-desktop.jpg" alt="" class="img img__family carousel__img">
+    `);
   }
 
 }

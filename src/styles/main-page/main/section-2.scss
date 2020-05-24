@@ -3,14 +3,39 @@
   background-size: 78,5% 320px;
   padding: 70px 0 0 0;
 
+  @media(max-width: $tablet) { 
+    padding: 0 0 120px 0;
+    background-size: 50% 320px;
+    background-position: right bottom;
+  }
+  
+  @media(max-width: $mobile) { 
+    background: #ffffff;
+    padding: 0 0 80px 0;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
     position: relative;
+
+    @media(max-width: $tablet) { 
+      flex-direction: column-reverse;
+      text-align: center;
+    }
   }
 
   &__wrap {
     padding: 150px 0 0 0;
     margin-right: 125px;
+
+    @media(max-width: $tablet) { 
+      margin: 0;
+      padding-top: 65px
+    }
+
+    @media(max-width: $mobile) { 
+      padding-top: 51px;
+    }
   }
 }

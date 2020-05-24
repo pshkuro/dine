@@ -1,13 +1,49 @@
 .header {
-  background: url(/public/images/homepage/hero-bg-desktop.jpg) bottom right no-repeat;
+  background: url(/public/images/homepage/hero-bg-desktop.jpg) no-repeat;
+  background-size: 100% 100%;
   padding: 45px 0 188px 0;
+
+  @media(max-width: $tablet) {
+    background: url(/public/images/homepage/hero-bg-tablet.jpg) no-repeat, #111111;
+    background-position: top center;
+    padding: 374px 0 216px 0;
+    text-align: center;
+  }
+
+  @media(max-width: $mobile) {
+    background: url(/public/images/homepage/hero-bg-mobile.jpg) no-repeat, #111111;
+    background-position: top center;
+    padding: 232px 0 152px 0;
+    text-align: center;
+  }
 
   &__title {
     margin: 153px 0 24px 0;
+
+    @media(max-width: $tablet) { 
+      margin: 32px 0 24px 0;
+      font-size: 48px;
+    }
+
+    @media(max-width: $mobile) { 
+      font-size: 32px;
+    }
+  }
+
+  &__desciprion {
+    @media(max-width: $mobile) { 
+      br {
+        display: none;;
+      }
+    }
   }
 
   &__button {
     margin-top: 42px;
+
+    @media(max-width: $tablet) { 
+      margin-top: 24px;
+    }
   }
 
 }

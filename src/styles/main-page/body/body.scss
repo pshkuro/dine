@@ -1,3 +1,6 @@
+$tablet: 1440px;
+$mobile: 767px;
+
 body {
   margin:0;
   padding:0;
@@ -7,11 +10,24 @@ body {
 
 .container {
   margin: 0 auto;
+  max-width: $tablet;
+  box-sizing: border-box;
   padding: 0 165px 0 165px;
 }
 
-@media(min-width: 992px) {
+@media(max-width: $tablet) {
   .container {
-    max-width: 1440px;
+    max-width: $mobile;
+    padding: 0 97px 0 97px;
   }
 }
+
+@media(max-width: $mobile) {
+  .container {
+    max-width: $mobile;
+    padding: 0 24px;;
+  }
+}
+
+
+

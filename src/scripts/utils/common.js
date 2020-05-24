@@ -1,4 +1,7 @@
-const SHAKE_ANIMATION_TIMEOUT = 600;
+const Timeout = {
+  SHAKE_ANIMATION: 600,
+  SHOW_ELEMENT: 4000,
+};
 
 // Добавляет элементу активный класс при клике
 export const activateElement = (activeClickElement, container, activeClass) => {
@@ -16,5 +19,13 @@ export const shake = (element) => {
 
   setTimeout(() => {
     element.classList.remove(`shake`);
-  }, SHAKE_ANIMATION_TIMEOUT);
+  }, Timeout.SHAKE_ANIMATION);
+};
+
+export const showElement = (element) => {
+  element.style.display = 'block';
+
+  setTimeout(() => {
+    element.style.display ='none';
+  }, Timeout.SHOW_ELEMENT);
 };

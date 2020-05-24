@@ -22,12 +22,20 @@
   @include pattern__lines();
   top: 255px;
   right: 50px;
+
+  @media(max-width: $mobile) { 
+    display: none;
+  }
 }
 
 .section-3__wrap__description .row__photos::after {
   @include photos__line();
   top: 13px;
   right: -33px;
+
+  @media(max-width: $mobile) { 
+    display: none;
+  }
 }
 
 .section-4__container {
@@ -36,6 +44,10 @@
     @include pattern__lines();
     top: -37px;
     left: -48px;
+
+    @media(max-width: $mobile) { 
+      display: none;
+    }
   }
 
   &__row__content {
@@ -45,6 +57,16 @@
       left: -114px;
       width: 95px;
       background-size: 95px 1px;
+
+      @media(max-width: $tablet) { 
+        left: 37%;
+        top: 30px;
+        width: 48px;
+      }
+
+      @media(max-width: $mobile) { 
+        left: 43%;
+      }
     }
   }
 }

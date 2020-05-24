@@ -1,6 +1,6 @@
 import ValidationError from "../classes/validation-error";
 import validator from "validator";
-import {shake} from "../utils/common";
+import {shake, showElement} from "../utils/common";
 
 const PEOPLE_MIN_COUNT = 1;
 
@@ -22,6 +22,7 @@ export default class ReservationFormController {
     this._selectList = this._select.querySelector('.select__list');
     this._selectHeader = this._select.querySelector('.select__head');
     this._peopleCount = this._peopleCountElement.innerHTML;
+    this._successMessage = this._reservationForm.querySelector('.reservation__success-message');
 
     this._addListeners();
   }
@@ -176,6 +177,18 @@ export default class ReservationFormController {
       peopleCount,
     };
   }
+  
+  // Send reservation info on server
+  _sendReservationInfo(info) {
+    this._api.sendFormInfo(info)
+    .then(() => {
+      this._reservationForm.reset();
+      showElement(this._successMessage);
+    })
+    .catch(() => {
+      shake(this._reservationForm);
+    });
+  }
 
   _setCloseSelectStyle() {
     this._select.classList.remove('select__open');
@@ -186,15 +199,4 @@ export default class ReservationFormController {
     this._select.classList.add('select__open');
     this._selectList.style.display = `none`;
   }
-
-  _sendReservationInfo(info) {
-    this._api.sendFormInfo(info)
-    .then(() => {
-      // Вывести сообщение об успешной отправке
-    })
-    .catch(() => {
-      shake(this._reservationForm);
-    });
-  }
- 
 }

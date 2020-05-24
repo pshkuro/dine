@@ -3,9 +3,22 @@
   background: url(/public/images/patterns/pattern-curve-top-right.svg) no-repeat top left;
   background-size: 545px 320px;
 
+  @media(max-width: $tablet) { 
+    padding: 120px 0;
+  }
+  
+  @media(max-width: $mobile) { 
+    padding: 80px 0 120px 0;
+    background: #ffffff;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
+
+    @media(max-width: $tablet) { 
+      flex-direction: column;
+    }
 
     // Photo block
     &__row__photo {
@@ -18,21 +31,48 @@
       flex-direction: column;
       margin-left: 105px;
 
+      @media(max-width: $tablet) { 
+        flex-direction: column-reverse;
+        margin: 0;
+      }
+
       .row__content__description {
         &__font-body_m {
           margin: -13px 0px 32px 0px;
+        }
+
+        @media(max-width: $tablet) { 
+          text-align: center;
         }
       }
 
       .row__content__slider {
         margin-top: 70px;
 
-        // Slider buttons default style
-        .font-head_xs span {
-          @include setTextOpacity();
+        @media(max-width: $tablet) { 
+          display: flex;
+          justify-content: space-between;
+        }
+        
+        @media(max-width: $mobile) { 
+          flex-direction: column;
+          margin-top: 48px;
+          text-align: center;
+        }
 
-          &:hover {
-            @include setTextOpacity(1, 1);
+        // Slider buttons default style
+        .font-head_xs {
+
+          @media(max-width: $mobile) { 
+            margin-top: 0;
+          }
+
+          span {
+            @include setTextOpacity();
+  
+            &:hover {
+              @include setTextOpacity(1, 1);
+            }
           }
         }
 

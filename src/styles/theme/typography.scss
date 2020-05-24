@@ -13,11 +13,11 @@
 };
 
 $typography_variants: (
-  head_l: typography_variant(64px, 300, 1.13, -0.8px),
-  head_m: typography_variant(40px, 700, 1.4, -0.5px),
+  head_l: typography_variant(6.4rem, 300, 1.13, -0.8px),
+  head_m: typography_variant(4.0rem, 700, 1.4, -0.5px),
   head_s: typography_variant(18px, 700, 1.56, -0.22px),
   head_xs: typography_variant(14px, 600, 2, 2px),
-  body_m: typography_variant(18px, 400, 1.67, -0.22px),
+  body_m: typography_variant(1.8rem, 400, 1.67, -0.22px),
   body_s: typography_variant(15px, 400, 1.87, -0.19px),
   footer_m: typography_variant(14px, 400, 2, 2px),
 );
@@ -36,5 +36,13 @@ $typography_variants: (
     &-#{$variant} {
       @include typography($variant);
     }
+  }
+}
+
+html {
+  font-size: 10px;
+
+  @media(max-width: $mobile) { 
+    font-size: 8.4px;
   }
 }

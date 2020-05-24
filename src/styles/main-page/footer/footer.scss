@@ -1,12 +1,47 @@
 .footer {
   padding: 78px 0 78px 0;
 
+  @media(max-width: $tablet) { 
+    padding: 64px 0;
+  }
+
+  @media(max-width: $mobile) { 
+    padding: 80px 0;
+  }
+
   p {
     margin: 0;
   }
 
   &__container {
     display: flex;
-    justify-content: space-between;
+
+    @media(max-width: $mobile) { 
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__row__content{
+      display: flex;
+      justify-content: space-around;
+      margin-left: 200px;
+
+      @media(max-width: $tablet) { 
+        flex-direction: column;
+        margin-left: 120px;
+      }
+
+      @media(max-width: $mobile) { 
+        margin: 40px 0 0 0;
+      }
+
+      .footer__content__address{
+        margin-right: 124px;
+
+        @media(max-width: $tablet) { 
+          margin: 0 0 32px 0;
+        }
+      }
+    }
   }
 }

@@ -15,7 +15,7 @@
       </div>
       <h1 class="header__title font-head_l">Exquisite dining<br>
         since 1989</h1>
-      <p class="font-body_m">Experience our seasonal menu in beautiful<br>
+      <p class="header__desciprion font-body_m">Experience our seasonal menu in beautiful<br>
          country surroundings. Eat the freshest produce<br>
          from the comfort of our farmhouse.</p>
       <form action="reservation.html">
@@ -32,7 +32,7 @@
             <img src="/public/images/patterns/pattern-divide.svg" alt="" class="img__divide">
             <h2 class="section-1__title font-head_m">Enjoyable place<br>
               for all the family</h2>
-            <p class="font-body_m">Our relaxed surroundings make dining with us a
+            <p class="section-1__desciption font-body_m">Our relaxed surroundings make dining with us a
                great experience for everyone. We can even
                arrange a tour of the farm before your meal.</p>
         </div>
@@ -67,7 +67,10 @@
         <div class="description section-3__wrap__description">
           <div class="description__food border-line__bottom ">
             <div class="row__photos">
-              <img src="/public/images/homepage/salmon-desktop-tablet.jpg" alt="" class="img__food">
+              <picture>
+                <source media="(max-width: 767px)" srcset="/public/images/homepage/salmon-mobile.jpg"> 
+                <img src="/public/images/homepage/salmon-desktop-tablet.jpg" alt="" class="img__food">
+              </picture>
             </div>
             <div class="row__content">
               <h3 class="font-head_s row__content_font-head_s">Seared Salmon Fillet</h3>
@@ -77,7 +80,10 @@
           </div>
           <div class="description__food border-line__bottom ">
             <div class="row__photos">
-              <img src="/public/images/homepage/beef-desktop-tablet.jpg" alt="" class="img__food">
+              <picture>
+                <source media="(max-width: 767px)" srcset="/public/images/homepage/beef-mobile.jpg"> 
+                <img src="/public/images/homepage/beef-desktop-tablet.jpg" alt="" class="img__food">
+              </picture>
             </div>
             <div class="row__content">
               <h3 class="font-head_s row__content_font-head_s">Rosemary Filet Mignon</h3>
@@ -86,7 +92,10 @@
           </div>
           <div class="description__food">
             <div class="row__photos">
-              <img src="/public/images/homepage/chocolate-desktop-tablet.jpg" alt="" class="img__food">
+              <picture>
+                <source media="(max-width: 767px)" srcset="/public/images/homepage/chocolate-mobile.jpg"> 
+                <img src="/public/images/homepage/chocolate-desktop-tablet.jpg" alt="" class="img__food">
+              </picture>
             </div>
             <div class="row__content">
               <h3 class="font-head_s row__content_font-head_s">Summer Fruit Chocolate Mousse</h3>
@@ -110,7 +119,7 @@
             <button class="button button_theme_dark">BOOK A TABLE</button>
           </form>
         </div>
-      </div>
+      </div> .
     </section>
   </main>
 
@@ -119,16 +128,18 @@
       <div class="footer__container__row__logo">
         <img class="img__logo" src="../public/images/logo.svg" alt="Dine">
       </div>
-      <div class="footer__container__row__address">
+      <div class="footer__container__row__content">
+        <div class="footer__content__address">
         <p class="font-footer_m">MARTHWAITE, SEDBERGH<br>
           CUMBRIA<br>
           +00 44 123 4567</p>
       </div>
-      <div class="footer__container__row__open-time">
+      <div class="footer__content__open-time">
         <p class="font-footer_m">OPEN TIMES<br>
           MON - FRI: 09:00 AM - 10:00 PM<br>
           SAT - SUN: 09:00 AM - 11:30 PM
           </p>
+      </div>
       </div>
     </div>
   </footer>

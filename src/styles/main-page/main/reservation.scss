@@ -3,12 +3,39 @@
   background: url(/public/images/homepage/ready-bg-desktop.jpg) no-repeat;
   background-size: 100% 100%;
 
+  @media(max-width: $tablet) { 
+    padding: 65px 0 45px 0;
+    background: url(/public/images/homepage/ready-bg-tablet.jpg) no-repeat;
+    background-size: 100%;
+  }
+
+  @media(max-width: $mobile) { 
+    padding: 80px 0;
+    background: url(/public/images/homepage/ready-bg-mobile.jpg) no-repeat;
+    background-size: 100% 100%;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
 
+    @media(max-width: $tablet) { 
+      text-align: center;
+      flex-direction: column;
+    }
+
+    &__row__title {
+      @media(max-width: $tablet) { 
+        margin: 0 -40px 0 -40px;
+      }
+    }
+
     .row__title__font-head_m {
       margin: 0;
+
+      @media(max-width: $tablet) { 
+        margin-bottom: 23px;
+      }
     }
   }
 }
