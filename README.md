@@ -1,8 +1,6 @@
 width - 30
 height - 40
 when button disabled on site?
-delete listeners??
-адаптировать
 при шейке псевдоэлемент над а не под
 
 

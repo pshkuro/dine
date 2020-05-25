@@ -10,14 +10,15 @@
 <body>
   <header class="reservation-page__header color-codGrey">
     <div class="container">
-      <div class="logo">
+      <div class="logo resevation__img__logo">
         <a href="/" class="href"><img class="img__logo" src="/public/images/logo.svg" alt="Dine"></a>
       </div>
-      <h1 class="header__title font-head_l">Reservations</h1>
-      <p class="font-body_m">We can’t wait to host you. If you have any<br>
+      <h1 class="reservation-page__header__title font-head_l">Reservations</h1>
+      <p class="reservation-page__header__description font-body_m">We can’t wait to host you. If you have any<br>
          special requirements please feel free to call<br>
          on the phone number below. We’ll be happy<br>
          to accommodate you.</p>
+        <button data-scrollable=".reservation-form" class="button button_theme_dark reservation-page__header__button-reserve">RESERVE PLACE</button>
     </div>
   </header>
 
@@ -29,25 +30,33 @@
             <input type="text" placeholder="Name" maxlength="40" id="name" class="error-message__parent">
             <input type="email" placeholder="Email" maxlength="30" id="email" class="error-message__parent">
             <div class="reservation-form__date reservation-form__picked error-message__parent">
-              <h2 class="font-body_m">Pick a date</h2>
-              <input type="text" placeholder="MM" id="month" class="picked-el number__field" maxlength="2">
-              <input type="text" placeholder="DD" id="day" class="picked-el number__field" maxlength="2">
-              <input type="text" placeholder="YYYY" id="year" class="picked-el__big number__field" maxlength="4">
+              <div>
+                <h2 class="font-body_m reservation-form__picked__title">Pick a date</h2>
+              </div>
+              <div class="reservation-form__choosed-el__container">
+                <input type="text" placeholder="MM" id="month" class="picked-el number__field" maxlength="2">
+                <input type="text" placeholder="DD" id="day" class="picked-el number__field" maxlength="2">
+                <input type="text" placeholder="YYYY" id="year" class="picked-el__big number__field" maxlength="4">
+              </div>
             </div>
             <div class="reservation-form__time reservation-form__picked error-message__parent">
-              <h2 class="font-body_m">Pick a time</h2>
-              <input type="text" placeholder="09" id="hour" class="picked-el number__field" maxlength="2">
-              <input type="text" placeholder="00" id="minutes" class="picked-el number__field" maxlength="2">
-              <div class="select select__open picked-el__big" id="meridien">
-                <div class="select__head">
-                  <span class="select__head__content">AM</span>
-                  <div class="select__img img__arrow"></div>
-                </div>
-                <div class="select__list">
-                  <ul>
-                    <li class="checked">AM</li>
-                    <li>PM</li>
-                  </ul>
+              <div>
+                <h2 class="font-body_m reservation-form__picked__title">Pick a time</h2>
+              </div>
+              <div class="reservation-form__choosed-el__container">
+                <input type="text" placeholder="09" id="hour" class="picked-el number__field" maxlength="2">
+                <input type="text" placeholder="00" id="minutes" class="picked-el number__field" maxlength="2">
+                <div class="select select__open picked-el__big" id="meridien">
+                  <div class="select__head">
+                    <span class="select__head__content">AM</span>
+                    <div class="select__img img__arrow"></div>
+                  </div>
+                  <div class="select__list">
+                    <ul>
+                      <li class="checked">AM</li>
+                      <li>PM</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -61,7 +70,7 @@
               </button>
             </div>
             <button class="button button_theme_reservation button__resarvation-form">MAKE RESERVATION</button>
-            <p class="reservation__success-message font-head_xs">Your information has been accepted.<br>
+            <p class="reservation__message font-head_xs">Your information has been accepted.<br>
                Our staff will contact you shortly to confirm your reservation.</p>
           </form>
         </div>
@@ -72,18 +81,20 @@
   <footer class="footer color-codGrey bg-color__black">
     <div class="container footer__container">
       <div class="footer__container__row__logo">
-        <img class="img__logo" src="/public/images/logo.svg" alt="Dine">
+        <img class="img__logo" src="../public/images/logo.svg" alt="Dine">
       </div>
-      <div class="footer__container__row__address">
+      <div class="footer__container__row__content">
+        <div class="footer__content__address">
         <p class="font-footer_m">MARTHWAITE, SEDBERGH<br>
           CUMBRIA<br>
           +00 44 123 4567</p>
       </div>
-      <div class="footer__container__row__open-time">
+      <div class="footer__content__open-time">
         <p class="font-footer_m">OPEN TIMES<br>
           MON - FRI: 09:00 AM - 10:00 PM<br>
           SAT - SUN: 09:00 AM - 11:30 PM
           </p>
+      </div>
       </div>
     </div>
   </footer>

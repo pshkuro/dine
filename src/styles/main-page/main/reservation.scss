@@ -28,6 +28,10 @@
       @media(max-width: $tablet) { 
         margin: 0 -40px 0 -40px;
       }
+
+      @media(max-width: $mobile) { 
+       margin: 0;
+      }
     }
 
     .row__title__font-head_m {

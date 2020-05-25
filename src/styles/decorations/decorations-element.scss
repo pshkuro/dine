@@ -12,9 +12,9 @@
   z-index: 1;
   position: absolute;
   width: 36px;
-  height: 2px;
-  background: url(/public/images/icons/icon-minus.svg) no-repeat 100% 100%;
-  background-size: 36px 1px;
+  height: 1px;
+  // // background: url(/public/images/icons/icon-minus.svg) no-repeat 100% 100%;
+  // background-size: 36px 1px;
 }
 
 
@@ -54,9 +54,9 @@
     .row__content__slider .active::before {
       @include photos__line();
       top: 10px;
-      left: -114px;
-      width: 95px;
-      background-size: 95px 1px;
+      left: -106px;
+      width: 75px;
+      background-color: #9e7f66;
 
       @media(max-width: $tablet) { 
         left: 37%;
@@ -78,6 +78,10 @@
     z-index: -1;
     bottom: -40px;
     left: -85px;
+
+    @media(max-width: $tablet) { 
+      display: none;
+     }
   }
 
     li.checked {

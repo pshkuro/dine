@@ -1,14 +1,64 @@
 .reservation-page__header  {
   background: url(/public/images/booking/hero-bg-desktop.jpg) no-repeat;
-  background-size: 100% 100%;
+  background-size: 100% 110%;
   padding: 45px 0 126px 0;
+
+  @media(max-width: $tablet) { 
+   background: url(/public/images/booking/hero-bg-tablet@2x.jpg) no-repeat;
+   background-size: cover;
+   background-position: center;
+   padding: 56px 0 250px;
+   text-align: center;
+  }
+
+  @media(max-width: $mobile) { 
+    padding: 56px 0 228px 0;
+    background: url(/public/images/booking/hero-bg-mobile@2x.jpg) no-repeat;
+    background-size: 100%;
+  }
+
+  .resevation__img__logo {
+    text-align: left;
+    @media(max-width: $mobile) { 
+      text-align: center;
+    }
+  }
+
 
   &__title {
     margin: 153px 0 24px 0;
+
+    @media(max-width: $tablet) { 
+      margin: 64px 0 16px 0;
+      font-size: 48px;
+     }
+
+     @media(max-width: $mobile) { 
+      font-size: 32px;
+      margin-top: 40px;
+    }
   }
 
-  &__button {
-    margin-top: 42px;
+  &__description {
+    @media(max-width: $tablet) { 
+      font-size: 18px;
+
+      br {
+        display: none;
+      }
+     }
+
+     @media(max-width: $mobile) { 
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
   }
 
+  &__button-reserve {
+    display: none;
+
+    @media(max-width: $mobile) { 
+      display: inline-block;
+    }
+  }
 }

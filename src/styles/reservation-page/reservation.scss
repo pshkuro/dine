@@ -3,12 +3,16 @@
   background: url(/public/images/patterns/pattern-curve-bottom-right.svg) left top no-repeat;
   background-size: 70% 100%;
 
+  @media(max-width: $tablet) { 
+    padding: 120px 0 80px 0;
+    background: #fff;
+   }
+
   .reservation-form__container {
     display: flex;
     justify-content: flex-end;
 
     .reservation-form {
-
       margin-top: -520px;
       width: 540px;
       padding: 48px;
@@ -17,15 +21,30 @@
       position: relative;
       @include setPageElementShadow();
 
-      input, #meridien {
+      @media(max-width: $tablet) { 
+        margin-top: -354px;
+       }
+
+       @media(max-width: $mobile) { 
+        width: 100%;
+        margin-top: -260px;
+        padding: 32px;
+      }
+
+      input {
         box-sizing: border-box;
         width: 100%;
         padding: 16px;
         margin-bottom: 16px;
         border: none;
         border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 0;
         font: 400 18px Spartan;
         outline: none;
+
+        @media(max-width: $mobile) { 
+          padding: 16px 7px;
+        }
 
         &:focus {
           border-bottom: 1px solid rgba(0, 0, 0, 1);
@@ -42,21 +61,41 @@
       }
       };
 
+      #meridien {
+        @extend input;
+        width: 97px;
+      }
+
       .error-message {
         font: 500 10px Spartan;
         color: #b54949;
         margin: -5px 0 0 0;
       }
 
+      &__choosed-el__container {
+        display: flex;
+        justify-content: space-between;
+
+        @media(max-width: $mobile) { 
+          margin-bottom: 16px;
+        }
+      }
 
       // Picked inputs blocks
       &__picked {
         display: flex;
-        justify-content: space-between;
+
+        @media(max-width: $mobile) { 
+          flex-direction: column;
+        }
 
         input, #meridien {
-          margin-left: 16px;
+          margin-left: 25px;
           text-align: center;
+
+          @media(max-width: $mobile) { 
+            margin: 0;
+          }
         }
 
       // Select styles
@@ -69,6 +108,11 @@
           padding: 0;
           max-width: 100px;
 
+          @media(max-width: $mobile) { 
+            width: 33%;
+            margin: 0; 
+          }
+
           .select__head {
             display: flex;
             justify-content: space-around;
@@ -76,6 +120,10 @@
 
             &__content {
               margin-left: 20px;
+
+              @media(max-width: $mobile) { 
+                margin: 0px;
+              }
             }
 
             .select__img {
@@ -87,6 +135,7 @@
             }
           }
 
+          // Showed select list styles
           .select__list {
             position: absolute;
             width: 100%;
@@ -103,6 +152,9 @@
               padding: 23px 0 7px 20px;
               box-sizing: border-box;
 
+              @media(max-width: $mobile) { 
+                padding: 23px 0 7px 10px;
+              }
             }
 
             li {
@@ -115,6 +167,13 @@
         .select__open {
           .select__img {
             transform: rotate(180deg);
+            // transition: all 0.5s ease-out 0.2s;
+          }
+        }
+
+        &__title {
+          @media(max-width: $mobile) { 
+            margin: 0px;
           }
         }
       }
@@ -123,8 +182,17 @@
       .picked-el {
         width: 80px;
 
+        @media(max-width: $mobile) { 
+         width: 27%;
+        }
+
         &__big {
           width: 97px;
+
+          @media(max-width: $mobile) { 
+            margin: 0;
+            width: 33%;
+          }
         }
       }
 
@@ -137,7 +205,7 @@
         margin-bottom: 32px;
       }
 
-      .reservation__success-message {
+      .reservation__message {
         display: none;
         text-align: center;
         letter-spacing: 0px;

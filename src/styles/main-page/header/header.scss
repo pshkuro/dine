@@ -12,9 +12,7 @@
 
   @media(max-width: $mobile) {
     background: url(/public/images/homepage/hero-bg-mobile.jpg) no-repeat, #111111;
-    background-position: top center;
     padding: 232px 0 152px 0;
-    text-align: center;
   }
 
   &__title {

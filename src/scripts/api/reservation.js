@@ -24,7 +24,7 @@ export default class API {
 
   sendFormInfo(data) {
     return this._load({
-      url: `..................`,
+      url: '',
       method: Method.POST,
       body: JSON.stringify(data),
       headers: new Headers({"Content-Type": `application/json`})

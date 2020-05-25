@@ -1,10 +1,11 @@
 import API from "./api/reservation";
 import CarouselController from './controllers/carousel';
 import ReservationFormController from './controllers/reservation-form';
+import Scollable from "./scrolable/scrolable";
 import '../styles/index.scss';
 
 const AUTHORIZATION = `Basic kTy9gIdsz2217rD`;
-const END_POINT = ``;
+const END_POINT = '';
 
 const carouselContainer = document.querySelector('.section-4');
 const reservationFormContainer = document.querySelector('.reservation-page__container');
@@ -19,5 +20,6 @@ if (carouselContainer) {
 
 // Render ReservationPage FormComponent
 if (reservationFormContainer) {
-  const reservaionFormController = new ReservationFormController(api);
+  new ReservationFormController(api);
+  new Scollable();
 }

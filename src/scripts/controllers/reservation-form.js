@@ -22,7 +22,7 @@ export default class ReservationFormController {
     this._selectList = this._select.querySelector('.select__list');
     this._selectHeader = this._select.querySelector('.select__head');
     this._peopleCount = this._peopleCountElement.innerHTML;
-    this._successMessage = this._reservationForm.querySelector('.reservation__success-message');
+    this._successMessage = this._reservationForm.querySelector('.reservation__message');
 
     this._addListeners();
   }
@@ -61,7 +61,7 @@ export default class ReservationFormController {
     sendFormButton.addEventListener('click', (evt) => {
       evt.preventDefault();
       this._resetInvalidStyle();
-      this._setOpenSelectStyle();
+      this._setCloseSelectStyle();
       this._validate();
 
       const isInvalid = this._reservationForm.classList.contains('invalid');
@@ -77,6 +77,8 @@ export default class ReservationFormController {
 
   // Select work
   _openSelectOptionsHandler(){
+    this._select.classList.remove('select__open');
+
     this._selectHeader.addEventListener('click', () => {
       if (this._select.classList.contains('select__open')) {
         this._setCloseSelectStyle();
@@ -186,17 +188,25 @@ export default class ReservationFormController {
       showElement(this._successMessage);
     })
     .catch(() => {
+      this._setSendErrorMessage();
       shake(this._reservationForm);
     });
   }
 
   _setCloseSelectStyle() {
     this._select.classList.remove('select__open');
-    this._selectList.style.display = `block`;
+    this._selectList.style.display = `none`;
   }
 
   _setOpenSelectStyle() {
     this._select.classList.add('select__open');
-    this._selectList.style.display = `none`;
+    this._selectList.style.display = `block`; 
   }
+
+  _setSendErrorMessage() {
+    const errorMessage = this._successMessage;
+    errorMessage.innerHTML = 'Sorry, something wrong. Please, try again.';
+    showElement(errorMessage);
+  }
+
 }

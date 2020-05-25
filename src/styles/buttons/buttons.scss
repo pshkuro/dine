@@ -62,13 +62,23 @@
 
 .button {
   &__people-count {
+    display: flex;
+    justify-content: center;
     min-width: 26px;
     width: 26px;
     height: 26px;
     margin: 0 30px;
+
+    @media(max-width: $mobile) { 
+      margin: 0 15px;
+    }
   }
 
   &__resarvation-form {
     width: 100%;
+
+    @media(max-width: $mobile) { 
+      min-width: 100%;
+    }
   }
 }

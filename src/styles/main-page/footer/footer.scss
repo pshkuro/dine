@@ -13,6 +13,11 @@
     margin: 0;
   }
 
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
   &__container {
     display: flex;
 
@@ -36,6 +41,7 @@
       }
 
       .footer__content__address{
+        color: #fff;
         margin-right: 124px;
 
         @media(max-width: $tablet) { 
