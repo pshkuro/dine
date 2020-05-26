@@ -62,7 +62,7 @@
 
         // Slider buttons default style
         .font-head_xs {
-
+          cursor: pointer;
           @media(max-width: $mobile) { 
             margin-top: 0;
           }
