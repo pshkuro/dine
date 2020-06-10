@@ -1,9 +1,3 @@
-width - 30
-height - 40
-when button disabled on site?
-при шейке псевдоэлемент над а не под
-
-
 # Webpack Frontend Starterkit
 
 [![Dependabot badge](https://flat.badgen.net/dependabot/wbkd/webpack-starter?icon=dependabot)](https://dependabot.com/)
